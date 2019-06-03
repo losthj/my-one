@@ -67,45 +67,45 @@ manifest.json   PWA serviceWorker  快捷方式 图片 地址
 
 ### PropTypes与DefaultProps
 
-PropTypes属性接受的强校验<br />
-DefaultProps定义默认值 
+PropTypes属性接受的强校验  \<br> 
+DefaultProps定义默认值  
 
 ### state,props和render的关系
 
-当组件的state或者props发生改变的时候，render函数就会重新执行、、
+当组件的state或者props发生改变的时候，render函数就会重新执行
 当父组件的render函数被运行时，它的子组件的render都将被重新运行
 
 ### 什么是虚拟DOM?
-1、state 数据
-2、jsx模板 render函数中的jsx代码
-3、数据+模板想结合，生成真实的DOM，来显示
-4、state 发生改变
-5、数据 + 模板 结合，生成真实的DOM,替换原始的DOM
+1、state 数据  
 
-缺陷：
-第一次生成了一个完整的DOM片段
-第二次生成了一个完整的DOM片段
-第二次的DOM替换第一次的DOM,非常耗性能
+2、jsx模板 render函数中的jsx代码  
+3、数据+模板想结合，生成真实的DOM，来显示  
+4、state 发生改变  
+5、数据 + 模板 结合，生成真实的DOM,替换原始的DOM  
 
+缺陷： 
+第一次生成了一个完整的DOM片段  
+第二次生成了一个完整的DOM片段  
+第二次的DOM替换第一次的DOM,非常耗性能  
 
-1、state 数据
-2、JSX模板 
-3、数据 + 模板 结合，生成真实的DOM,来显示
-4、state 发生改变
-5、数据 + 模板 结合，生成真实的DOM,并不直接替换原始的DOM
-6、新的DOM（DocumentFragement）和原始的DOM做比对，找差异
-7、找出input框发生了变化
-8、只用新的DOM中的input元素，替换掉老的DOM中的input元素
+1、state 数据  
+2、JSX模板  
+3、数据 + 模板 结合，生成真实的DOM,来显示  
+4、state 发生改变  
+5、数据 + 模板 结合，生成真实的DOM,并不直接替换原始的DOM   
+6、新的DOM（DocumentFragement）和原始的DOM做比对，找差异  
+7、找出input框发生了变化  
+8、只用新的DOM中的input元素，替换掉老的DOM中的input元素   
 
-缺陷：
+缺陷： 
 性能的提升并不明显
 
 1、state 数据
 2、JSX模板 
 3、数据 + 模板 结合，生成真实的DOM,来显示
 <div id='abc'><span>Hello world</span></div>
-4、生成虚拟DOM(虚拟DOM就是一个JS对象，用它来描述真实的DOM)  （损耗了性能）
-['div',{id:'abc'},['span',{},'hello world']]
+4、生成虚拟DOM(虚拟DOM就是一个JS对象，用它来描述真实的DOM)  （损耗了性能） 
+['div',{id:'abc'},['span',{},'hello world']]  
 5、state 发生变化
 6、数据+ 模板 生成新的虚拟DOM（极大的提升了性能）
 ['div',{id:'abc'},['span',{},'bye bye']]
@@ -113,7 +113,7 @@ DefaultProps定义默认值
 8、直接操作DOM,改变span中的内容
 
 ### react 真正实现DOM
-1、state 数据
+1、state 数据 
 2、JSX模板 
 3、数据+模板 生成虚拟DOM(虚拟DOM就是一个JS对象，用它来描述真实的DOM)  （损耗了性能）
 ['div',{id:'abc'},['span',{},'hello world']]
