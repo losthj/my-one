@@ -65,10 +65,10 @@ manifest.json   PWA serviceWorker  快捷方式 图片 地址
 
 声明式开发方式（减少大量操作dom的开发量）、可以与其他框架并存、组件化、单向数据流（父组件可以往子组件传数据，但子组件不能改变父组件数据）、视图层框架、函数式编程（更容易实现自动化测试）
 
-### PropTypes与DefaultProps <br />
+### PropTypes与DefaultProps
 
-PropTypes属性接受的强校验<br />
-DefaultProps定义默认值 <br />
+PropTypes属性接受的强校验＜/br＞
+DefaultProps定义默认值
 
 ### state,props和render的关系
 
