@@ -102,7 +102,7 @@ DefaultProps定义默认值
 1、state 数据  <br />
 2、JSX模板  <br />
 3、数据 + 模板 结合，生成真实的DOM,来显示  <br />
- \<div id='abc'><span>Hello world</span></div>  <br />
+ \<div id='abc'>\<span>Hello world</span></div>  <br />
 4、生成虚拟DOM(虚拟DOM就是一个JS对象，用它来描述真实的DOM)  （损耗了性能）  <br />
 ['div',{id:'abc'},['span',{},'hello world']]   <br />
 5、state 发生变化  <br />
@@ -117,7 +117,7 @@ DefaultProps定义默认值
 3、数据+模板 生成虚拟DOM(虚拟DOM就是一个JS对象，用它来描述真实的DOM)  （损耗了性能）  <br />
 ['div',{id:'abc'},['span',{},'hello world']]  <br />
 4、用虚拟DOM的结构生成真实的DOM,来显示  <br />
-<div id="abc"><span>Hello world</span></div>  <br />
+\<div id="abc">\<span>Hello world</span></div>  <br />
 5、state 发生变化  <br />
 6、数据+ 模板 生成新的虚拟DOM（极大的提升了性能） <br />
 ['div',{id:'abc'},['span',{},'bye bye']]  <br />
@@ -132,7 +132,7 @@ Diff，diffrence  <br />
 ### 深入了解虚拟DOM
 jsx -> createElement ->虚拟DOM(js对象) -> 真实的DOM  <br />
 return React.createElement('div',{},'item');  <br />
-return <div>item</div>  <br />
+return \<div>item</div>  <br />
  
 ### 虚拟DOM中的Diff算法  
 比较原始虚拟DOM和新的虚拟DOM的区别，用到了diff算法  <br />
