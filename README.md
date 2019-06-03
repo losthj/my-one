@@ -45,7 +45,7 @@ React Fiber  16版本
 通过脚手架工具来编码  （Grunt/gulp.js/webpack）自动化构建工具
 官方的脚手架工具  Create-react-app  
 
-###先安装node.js  npm
+### 先安装node.js  npm
 package.json  是一个node的包文件，他会让你的项目你变成node的包  
 node_modules  第三方的模块
 
@@ -59,23 +59,23 @@ app.test.js  自动化测试的文件
 manifest.json   PWA serviceWorker  快捷方式 图片 地址
 
 
-###todolist的案例
+### todolist的案例
 
-###react的介绍
+### react的介绍
 
 声明式开发方式（减少大量操作dom的开发量）、可以与其他框架并存、组件化、单向数据流（父组件可以往子组件传数据，但子组件不能改变父组件数据）、视图层框架、函数式编程（更容易实现自动化测试）
 
-###PropTypes与DefaultProps <br />
+### PropTypes与DefaultProps <br />
 
 PropTypes属性接受的强校验<br />
 DefaultProps定义默认值 <br />
 
-###state,props和render的关系
+### state,props和render的关系
 
 当组件的state或者props发生改变的时候，render函数就会重新执行、、
 当父组件的render函数被运行时，它的子组件的render都将被重新运行
 
-###什么是虚拟DOM?
+### 什么是虚拟DOM?
 1、state 数据
 2、jsx模板 render函数中的jsx代码
 3、数据+模板想结合，生成真实的DOM，来显示
@@ -112,7 +112,7 @@ DefaultProps定义默认值 <br />
 7、比较原始虚拟DOM和新的虚拟DOM的区别，找到区别是span的内容（极大的提升了性能）
 8、直接操作DOM,改变span中的内容
 
-react 真正实现DOM
+### react 真正实现DOM
 1、state 数据
 2、JSX模板 
 3、数据+模板 生成虚拟DOM(虚拟DOM就是一个JS对象，用它来描述真实的DOM)  （损耗了性能）
@@ -130,12 +130,12 @@ Diff，diffrence
 1、性能提升了
 2、它使得跨端应用得以实现，React Native
 
-###深入了解虚拟DOM
+### 深入了解虚拟DOM
 jsx -> createElement ->虚拟DOM(js对象) -> 真实的DOM
 return React.createElement('div',{},'item');
 return <div>item</div>
 
-###虚拟DOM中的Diff算法
+### 虚拟DOM中的Diff算法
 比较原始虚拟DOM和新的虚拟DOM的区别，用到了diff算法
 setState异步的，为了提升性能
 react的虚拟DOM是同层比对的
