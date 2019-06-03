@@ -102,7 +102,7 @@ DefaultProps定义默认值
 1、state 数据  <br />
 2、JSX模板  <br />
 3、数据 + 模板 结合，生成真实的DOM,来显示  <br />
-<div id='abc'><span>Hello world</span></div>  <br />
+ \<div id='abc'><span>Hello world</span></div>  <br />
 4、生成虚拟DOM(虚拟DOM就是一个JS对象，用它来描述真实的DOM)  （损耗了性能）  <br />
 ['div',{id:'abc'},['span',{},'hello world']]   <br />
 5、state 发生变化  <br />
