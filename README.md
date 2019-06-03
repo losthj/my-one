@@ -67,7 +67,8 @@ manifest.json   PWA serviceWorker  快捷方式 图片 地址
 
 ### PropTypes与DefaultProps
 
-PropTypes属性接受的强校验  \<br /> 
+PropTypes属性接受的强校验  
+
 DefaultProps定义默认值  
 
 ### state,props和render的关系
