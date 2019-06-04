@@ -150,30 +150,30 @@ ref帮助我们直接获取DOM元素的时候来使用的
 生命周期函数是指在某一个时刻组件会自动调用执行的函数 <br />
 lnitialization 初始化  <br />
 Mountuing 挂载  （组件第一次挂载的流程）  <br />
->>>>componentWillMount(){} 在组件即将被挂载到页面的时刻自动执行  <br />
->>>>render(){}    页面的挂载  <br />
->>>>componentDidMount(){} 组件被挂载到页面之后自动执行  <br />
+* componentWillMount(){} 在组件即将被挂载到页面的时刻自动执行  <br />
+* render(){}    页面的挂载  <br />
+* componentDidMount(){} 组件被挂载到页面之后自动执行  <br />
 Updation  组件更新  <br />
 >>>>props <br />
-    >>>>*componentWillReceiveProps(){}  当一个组件从父组件接受了参数，   <br />
+    * componentWillReceiveProps(){}  当一个组件从父组件接受了参数，   <br />
         只要父组件的render函数被重新执行了，子组件的这个生命周期函数被执行 <br />
         如果这个组件第一次存在于父组件中，不会被执行 <br />
         如果这个组件之前已经存在于父组件中，才会被执行 <br />
-    >>>>*shouldComponentUpdate(){return true}  组件被更新之前，他会自动被执行 true更新false不更新 <br />
-    >>>>*componentWillUpdate(){}   组件被更新之前，它会自动执行，但是他在shouldComponentUpdate之后被执行，<br />
+    * shouldComponentUpdate(){return true}  组件被更新之前，他会自动被执行 true更新false不更新 <br />
+    * componentWillUpdate(){}   组件被更新之前，它会自动执行，但是他在shouldComponentUpdate之后被执行，<br />
         //如果shouldComponentUpdate返回true它才执行，如果返回false，这个函数就不会被执行<br />
-    >>>>*render(){} <br />
-    >>>>*componentDidUpdate(){}   组件更新完成之后，他会被执行 <br />
+    * render(){} <br />
+    * componentDidUpdate(){}   组件更新完成之后，他会被执行 <br />
 >>>>states  <br />
-    >>>>*shouldComponentUpdate(){return true}  组件被更新之前，他会自动被执行 true更新false不更新  <br />
-    >>>>*componentWillUpdate(){}   组件被更新之前，它会自动执行，但是他在shouldComponentUpdate之后被执行，  <br />
+    * shouldComponentUpdate(){return true}  组件被更新之前，他会自动被执行 true更新false不更新  <br />
+    * componentWillUpdate(){}   组件被更新之前，它会自动执行，但是他在shouldComponentUpdate之后被执行，  <br />
         //如果shouldComponentUpdate返回true它才执行，如果返回false，这个函数就不会被执行  <br />
-    >>>>*render(){}  <br />
-    >>>>*componentDidUpdate(){}   组件更新完成之后，他会被执行  <br />
+    * render(){}  <br />
+    * componentDidUpdate(){}   组件更新完成之后，他会被执行  <br />
 Unmounting  组件去除  <br />
->>>>*componentWillUnmount(){}   当这个组件即将被从页面中剔除的时候，会被执行  <br />
+    * componentWillUnmount(){}   当这个组件即将被从页面中剔除的时候，会被执行  <br />
 
- **每一个组件都有这么多生命周期函数，不是就一个父组件有 **
+ **每一个组件都有这么多生命周期函数，不是就一个父组件有**
 
  ### 生命周期函数的使用场景
 
