@@ -149,10 +149,12 @@ ref帮助我们直接获取DOM元素的时候来使用的
 ### React的生命周期函数
 生命周期函数是指在某一个时刻组件会自动调用执行的函数 <br />
 lnitialization 初始化  <br />
-Mountuing 挂载  （组件第一次挂载的流程）  <br />
+
+Mountuing 挂载  （组件第一次挂载的流程） <br />
 * componentWillMount(){} 在组件即将被挂载到页面的时刻自动执行  <br />
 * render(){}    页面的挂载  <br />
 * componentDidMount(){} 组件被挂载到页面之后自动执行  <br />
+
 Updation  组件更新  <br />
 props <br />
 * componentWillReceiveProps(){}  当一个组件从父组件接受了参数，   <br />
@@ -170,6 +172,7 @@ states  <br />
 //如果shouldComponentUpdate返回true它才执行，如果返回false，这个函数就不会被执行  <br />
 * render(){}  <br />
 * componentDidUpdate(){}   组件更新完成之后，他会被执行  <br />
+
 Unmounting  组件去除  <br />
 * componentWillUnmount(){}   当这个组件即将被从页面中剔除的时候，会被执行  <br />
 
