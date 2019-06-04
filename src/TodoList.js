@@ -1,6 +1,6 @@
 import React, { Component,Fragment } from 'react';
 import TodoItem from "./TodoItem";
-import Test from "./Test"
+// import Test from "./Test"
 import './style.css';
 
 
@@ -15,15 +15,20 @@ class TodoList extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
     }
     
+    
 
     render() {
-        console.log('render');
+        //console.log('render');
         return (  
             <Fragment>
                 {/*下面是一个input框*/}
                 <div>
                     <label htmlFor="insertArea">输入内容：</label>
-                    <input id="insertArea" type="text" className="input" value={this.state.inputValue} onChange={this.handleInputChange} />
+                    <input id="insertArea" type="text" 
+                    className="input" 
+                    value={this.state.inputValue}
+                    ref={(input)=> {this.input =input}}
+                     onChange={this.handleInputChange} />
                     <button onClick={this.handleBtnClick.bind(this)}>提交</button>
                 </div>
                 <div>
@@ -38,7 +43,7 @@ class TodoList extends Component {
                         <li>learning React</li> */}
                     </ul>
                 </div>
-                <Test content={this.state.inputValue } />
+                {/* <Test content={this.state.inputValue } /> */}
             </Fragment>
         );
     }
@@ -51,24 +56,35 @@ class TodoList extends Component {
         })
     }
 
-    handleInputChange(e){
-       // console.log(e.target.value);
-       //新版本的react 的写法
-    //    this.setState(()=>{
-    //        return{
-    //         inputValue:e.target.value
-    //        }
-    //    })
-        const value = e.target.value;
+   //ref使用的方式  不推荐使用
+   handleInputChange(){
+        const value = this.input.value;
         this.setState(()=>({
             inputValue:value
         }))
-
-    //旧版本的写法
-    //    this.setState({
-    //        inputValue:e.target.value
-    //    })
     }
+
+    // handleInputChange(e){
+    //    // console.log(e.target.value);
+    //    //新版本的react 的写法
+    // //    this.setState(()=>{
+    // //        return{
+    // //         inputValue:e.target.value
+    // //        }
+    // //    })
+    //     const value = e.target.value;
+    //     this.setState(()=>({
+    //         inputValue:value
+    //     }))
+
+    // //旧版本的写法
+    // //    this.setState({
+    // //        inputValue:e.target.value
+    // //    })
+    // }
+ 
+ 
+
     handleBtnClick(){
         //prevState是指修改之前的那组数据  prevState等价于this.state
         this.setState((prevState)=>({
@@ -82,6 +98,8 @@ class TodoList extends Component {
         //     inputValue:''
         // })
     }
+
+
     handleItemDelete(index){
         //console.log(index)
         //immutable  

@@ -31,7 +31,8 @@ class TodoItem extends Component {
 
 TodoItem.propTypes={
     test:PropTypes.string.isRequired,  //父组件没有传递数值，不会被验证  //isRequired父组件必须向子组件传递数值
-    content:PropTypes.string,
+    // content:PropTypes.string,
+    content:PropTypes.oneOfType([PropTypes.number,PropTypes.string]),
     handleItemDelete:PropTypes.func, //handleItemDelete接收的属性必须是函数
     index:PropTypes.number,
 }
