@@ -157,7 +157,7 @@ Mountuing 挂载  （组件第一次挂载的流程） <br />
 
 Updation  组件更新  <br />
 props <br />
-* componentWillReceiveProps(){}  当一个组件从父组件接受了参数，   <br />
+*  componentWillReceiveProps(){}  当一个组件从父组件接受了参数  <br />
 只要父组件的render函数被重新执行了，子组件的这个生命周期函数被执行 <br />
 如果这个组件第一次存在于父组件中，不会被执行 <br />
 如果这个组件之前已经存在于父组件中，才会被执行 <br />
@@ -179,5 +179,16 @@ Unmounting  组件去除  <br />
  **每一个组件都有这么多生命周期函数，不是就一个父组件有**
 
  ### 生命周期函数的使用场景
+父组件数据变化，父组件render函数被执行，子组件render函数也被执行。 <br />
+子组件shouldComponentUpdate(){return false} 提升了性能 （不是最优的写法）<br />
+正确的写法在TodoItem.js页面<br />
+一般来说，请求ajax数据，会放在componentDidMount函数里，做ajax请求的发送<br />
+ajax请求也可以放在constructor <br />
+安装yarn add axios 重新启动服务器yarn start
+
+### 使用Charles进行接口数据模拟
+Charles的使用和下载链接 <br />
+https://www.axihe.com/charles/charles/free-use.html   <br />
+
 
 

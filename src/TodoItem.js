@@ -8,8 +8,17 @@ class TodoItem extends Component {
         this.handleChlick=this.handleChlick.bind(this);
     }
     
+    //提高组件的性能，避免render函数的多次渲染
+    shouldComponentUpdate(nextProps,nextState){
+        if(nextProps.content !== this.props.content){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
     render() {
+        console.log("2 render")
         const {content,test} = this.props;
         //jsx -> createElement ->虚拟DOM(js对象) -> 真实的DOM
         //return React.createElement('div',{},'item');
